@@ -18,10 +18,10 @@
     <div class="weather-app-wrapper">
         <div class="weather-app">
 <div class="overview">
-<h1>London, United Kingdom</h1>
+<h1 id="city"></h1>
 <ul>
     <li>Friday 05:00</li>
-    <li>cloudy</li>
+    <li id="description"></li>
 </ul>
 </div>
 <div class="row">
@@ -29,16 +29,16 @@
         <div class="d-flex weather-temperature">
         <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="cloudy" id="icon" class="float-left"/>
         <div>
-            <strong id="temperature">12</strong>
+            <strong id="temperature"></strong>
             <span class="units">°C|&deg;F</span>
           </div>
         </div>
     </div>
     <div class="col-6">
         <ul>
-            <li>Precipitation:0%</li>
-            <li>Humidity:73%</li>
-            <li>Wind:2 Km/h</li>
+            
+            <li>Humidity:<span id="Humidity"></span>%</li>
+            <li>Wind:<span id="Wind"></span> Km/h</li>
         </ul>
     </div>
 </div>
@@ -47,5 +47,6 @@
     Open-Source Code</a> by Hollie Bradshaw</small>
     </div>
 </div>
+<script src="src/app.js"></script>
 </body>
 </html>
