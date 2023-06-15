@@ -25,7 +25,7 @@
                 <input type= "search" placeholder="Please enter a city.." class="form-control" id="city-input" autocomplete="off"/>
             </div>
             <div class="col-3">
-                <input type="submit" value="Search" />
+                <input type="submit" value="Search" id="button" />
             </div>
             </div>
             </form>
@@ -39,20 +39,32 @@
 <div class="row">
     <div class="col-6">
         <div class="d-flex weather-temperature">
-        <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="cloudy" id="icon" class="float-left"/>
+        <img src="" id="icon" class="float-left"/>
         <div>
             <strong id="temperature"></strong>
-            <span class="units">°C|&deg;F</span>
+            <span class="units"><strong>°C</strong>| <a href="#" id="fahrenheit"><strong>&degF</strong></a></span>
           </div>
         </div>
     </div>
+    
     <div class="col-6">
+        <img src="weather.png" id="img"/>
         <ul>
-            
             <li>Humidity:<span id="Humidity"></span>%</li>
             <li>Wind:<span id="Wind"></span> Km/h</li>
         </ul>
+    
     </div>
+   <div class="weather-forecast">
+    <div class="row">
+        <div class="col-2">
+            <div class="weather-forecast-date">Thu</div>
+         <img src="https://openweathermap.org/img/wn/04d@2x.png" width="42px"/>
+         <div class="weather-forecast-temp"><span class="weather-forecast-maximum">18&deg</span> <span class="weather-forecast-minimum">12&deg</span></div>
+        </div>
+    </div>
+
+   </div>
 </div>
 </div>
 <small> <a href="https://github.com/Hollieb63/vanilla-weather-app.git">
