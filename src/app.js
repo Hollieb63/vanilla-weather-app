@@ -19,6 +19,13 @@ let day=days[date.getDay()];
 return `${day} ${hours}: ${minutes}`;
 }
 
+function displayForecast(){
+    let forecastElement=document.querySelector("#forecast");
+    forecastElement.innerHTML="forecast";
+}
+
+
+
 
 function displayTemperature(response) {
 let temperatureElement=document.querySelector("#temperature");
@@ -36,6 +43,8 @@ cityElement.innerHTML=response.data.name;
 descriptionElement.innerHTML=response.data.weather[0].description;
 iconElement.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
+
+
 
 function search(city){
     let apiKey="2efb90627753bf3d901e44a0b3405473";
@@ -57,7 +66,10 @@ let temperatureElement=document.querySelector("#temperature");
 temperatureElement.innerHTML=Math.round(fahrenheitTemperature);
 }
 
+
+
 search("London");
+displayForecast();
 
 let form=document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
